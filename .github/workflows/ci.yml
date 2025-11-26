@@ -12,10 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./
-
     steps:
       # Paso 1: Clonar el repositorio
       - name: Checkout del código
@@ -53,6 +49,6 @@ jobs:
         with:
           name: Maven-Reports
           path: |
-            libreria/target/site/jacoco/jacoco.xml
-            libreria/target/checkstyle-result.xml
-            libreria/target/pmd.xml
+            target/site/jacoco/jacoco.xml
+            target/checkstyle-result.xml
+            target/pmd.xml
